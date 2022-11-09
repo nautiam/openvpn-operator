@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - vpn.example.com
+  resources:
+  - openvpns
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - vpn.example.com
+  resources:
+  - openvpns/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - vpn.example.com
+  resources:
+  - openvpns/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,31 @@
+# permissions for end users to edit openvpns.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: openvpn-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: openvpn-operator
+    app.kubernetes.io/part-of: openvpn-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: openvpn-editor-role
+rules:
+- apiGroups:
+  - vpn.example.com
+  resources:
+  - openvpns
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - vpn.example.com
+  resources:
+  - openvpns/status
+  verbs:
+  - get

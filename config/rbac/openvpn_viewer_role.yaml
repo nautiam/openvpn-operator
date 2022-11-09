@@ -1,0 +1,27 @@
+# permissions for end users to view openvpns.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: openvpn-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: openvpn-operator
+    app.kubernetes.io/part-of: openvpn-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: openvpn-viewer-role
+rules:
+- apiGroups:
+  - vpn.example.com
+  resources:
+  - openvpns
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - vpn.example.com
+  resources:
+  - openvpns/status
+  verbs:
+  - get
