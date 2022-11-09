@@ -33,9 +33,9 @@ type OpenvpnReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//+kubebuilder:rbac:groups=vpn.example.com,resources=openvpns,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=vpn.example.com,resources=openvpns/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=vpn.example.com,resources=openvpns/finalizers,verbs=update
+//+kubebuilder:rbac:groups=vpn.sunteco.io,resources=openvpns,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=vpn.sunteco.io,resources=openvpns/status,verbs=get;update;patch
+//+kubebuilder:rbac:groups=vpn.sunteco.io,resources=openvpns/finalizers,verbs=update
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.

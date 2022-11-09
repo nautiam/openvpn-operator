@@ -5,9 +5,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.10.0
   creationTimestamp: null
-  name: openvpns.vpn.example.com
+  name: openvpns.vpn.sunteco.io
 spec:
-  group: vpn.example.com
+  group: vpn.sunteco.io
   names:
     kind: Openvpn
     listKind: OpenvpnList

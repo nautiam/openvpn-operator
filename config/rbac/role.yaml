@@ -6,7 +6,7 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
-  - vpn.example.com
+  - vpn.sunteco.io
   resources:
   - openvpns
   verbs:
@@ -18,13 +18,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - vpn.example.com
+  - vpn.sunteco.io
   resources:
   - openvpns/finalizers
   verbs:
   - update
 - apiGroups:
-  - vpn.example.com
+  - vpn.sunteco.io
   resources:
   - openvpns/status
   verbs:

@@ -1,4 +1,4 @@
-apiVersion: vpn.example.com/v1alpha1
+apiVersion: vpn.sunteco.io/v1alpha1
 kind: Openvpn
 metadata:
   labels:
